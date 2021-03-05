@@ -243,7 +243,7 @@ PSQLTokenizer >> simpleQuotedIdentifier [
 	"The space character is added to be a valid character inside a quoted identifier because of empirical evidence it works."
 	^
 	$" asParser , 
-	(#letter asParser / $_ asParser / #digit asParser / $$ asParser / '""' asParser / Character space asParser / $' asParser / $( asParser / $) asParser) star ,
+	(#letter asParser/ $/ asParser/ $_ asParser / #digit asParser / $$ asParser / '""' asParser / Character space asParser / $' asParser / $( asParser / $) asParser) star ,
 	$" asParser
 ]
 
